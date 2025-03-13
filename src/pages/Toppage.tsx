@@ -7,8 +7,10 @@ import {
   Typography,
 } from "@mui/material";
 import { Footer } from "../components/Footer";
-import headerimage from "../assets/images/HeaderImage.jpg";
+import headerimage from "../assets/images/eyecatch_vscode.jpg";
+import nkcuglogo from "../assets/NKCUG_DP.svg";
 import { Header } from "../components/Header";
+import "../style/Toppage.scss";
 
 function createData(name: string, location: string) {
   return { name, location };
@@ -35,16 +37,20 @@ export const Toppage = () => {
     >
       <Box id="header">
         <Header />
-        <Box
-          component="img"
-          src={headerimage}
-          alt="ヘッダー用画像"
-          sx={{
-            width: "100%",
-            maxHeight: "30vh",
-            objectFit: "cover",
-          }}
-        />
+        <Box className="eyecatch">
+          <Box
+            component="img"
+            src={headerimage}
+            alt="ヘッダー用画像"
+            className="eyecatchImg"
+          />
+          <Box
+            component="img"
+            src={nkcuglogo}
+            alt="NKC-UG Logo"
+            id="eyecatchLogo"
+          />
+        </Box>
       </Box>
       <Box sx={{ textAlign: "center" }}>
         <Box id="about" sx={{ margin: 3 }}>

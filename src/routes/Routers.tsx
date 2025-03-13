@@ -4,6 +4,7 @@ import { SiteAbout } from "../pages/SiteAbout";
 import { Account } from "../pages/Account";
 import { Event } from "../pages/Event";
 import { Welcome } from "../pages/Welcome";
+import { NewStudent } from "../pages/NewStudent";
 
 export const Routers = () => {
   return (
@@ -14,6 +15,7 @@ export const Routers = () => {
         <Route path={"/Account"} element={<Account />} />
         <Route path={"/Event"} element={<Event />} />
         <Route path={"/Welcome"} element={<Welcome />} />
+        <Route path={"/NewStudent"} element={<NewStudent />} />
       </Routes>
     </BrowserRouter>
   );

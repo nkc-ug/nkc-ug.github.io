@@ -6,13 +6,13 @@ import nkcugLogo from "../assets/NKCUG_DP.svg";
 import { Divide as Hamburger } from "hamburger-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 export const Header = () => {
   const [isOpen, setOpen] = useState(false);
   const nav = useNavigate();
   const PAGE_LINK = [
     { name: "トップへ", link: "/" },
-    { name: "本サイトについて", link: "/SiteAbout" },
     { name: "アカウント一覧", link: "/Account" },
     { name: "イベント一覧", link: "/Event" },
     { name: "入部希望者向け", link: "/Welcome" },
@@ -49,6 +49,15 @@ export const Header = () => {
             },
           }}
         >
+          <Button
+            variant="outlined"
+            onClick={() => {
+              nav("/NewStudent");
+            }}
+          >
+            新入生の方へ
+            <ArrowRightIcon />
+          </Button>
           {PAGE_LINK.map((value, key) => {
             return (
               <Button

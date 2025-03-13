@@ -9,18 +9,18 @@ export const SiteAbout = () => {
       <Header />
       <Box sx={{ textAlign: "center" }}>
         <Typography variant="h4" sx={headingStyle}>
-          本サイトについて
+          当サイトについて
         </Typography>
         <Typography>
-          本サイトは名古屋工学院専門学校の公認サークル『NKC-UG』の公式サイトです。
+          当サイトは名古屋工学院専門学校の公認サークル『NKC-UG』の公式サイトです。
           <br />
-          本サイトはNKC-UGについての紹介を主に目的として運営を行っていきます。
+          当サイトはNKC-UGについての紹介を主に目的として運営を行っていきます。
         </Typography>
         <Typography variant="h4" sx={headingStyle}>
           各ページについて
         </Typography>
         <Typography>
-          本サイトは現在、『トップページ』『本サイトについて』『アカウント一覧』『イベント一覧』『入部希望者向け』の５ページで構成されています。
+          当サイトは現在、『トップページ』『当サイトについて』『アカウント一覧』『イベント一覧』『入部希望者向け』の５ページで構成されています。
         </Typography>
         <List sx={{ width: "fit-content", margin: "auto" }}>
           <ListItem>
@@ -33,7 +33,7 @@ export const SiteAbout = () => {
           </ListItem>
           <ListItem>
             <Card>
-              <Typography variant="h5">本サイトについて</Typography>
+              <Typography variant="h5">当サイトについて</Typography>
               <Typography>
                 当ページです。このサイトの各ページの説明や運営体制などについての説明を記載しています。
               </Typography>
