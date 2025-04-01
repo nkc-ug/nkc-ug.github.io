@@ -67,16 +67,17 @@ export const NewStudent = () => {
             イベント概要
           </Typography>
           <Typography>
-            開催日時：5月10日 15:30～（予定）
+            開催日時：５月のゴールデンウイーク辺りを予定しています。
             <br />
-            開催場所：来年度のCT3Aの教室？
+            開催場所：現在調整中です
             <br />
-            内容：NKC-UGについての説明とプチ勉強会
+            内容：NKC-UGについての説明とプチイベント
+            ※プチイベントについては現在企画中です
           </Typography>
           <Typography>
-            下のリンクから応募フォームにアクセスできます！ご友人もお誘いいただいて構いません！
+            詳細については決まり次第、告知したいと思います！
           </Typography>
-          <Box sx={{ textAlign: "center" }}>
+          <Box sx={{ textAlign: "center", display: "none" }}>
             <Link
               href={
                 "https://forms.office.com/Pages/ResponsePage.aspx?id=eeUPGhB_lUOsHmxSoVCbiP4hXRkgLplMkTlk7A0MQPlUOEZHUVBKSUgxTzNOU0NaMDNCQTBDRzBBOS4u"
