@@ -13,7 +13,7 @@ export const Footer = () => {
     >
       <Container>
         <Box sx={{ textAlign: "center" }}>
-          <Typography variant="caption">©2024-2025 NKC-UG</Typography>
+          <Typography variant="caption">©2024 NKC-UG</Typography>
         </Box>
       </Container>
     </AppBar>

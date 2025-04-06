@@ -20,7 +20,7 @@ export const Welcome = () => {
         <Typography variant="h4" className="heading" sx={headingStyle}>
           加入方法
         </Typography>
-        <Typography>公式XのDMやNKC-UG顧問から運営にご相談ください！</Typography>
+        <Typography>NKC-UG運営までご連絡ください。</Typography>
       </Box>
       <Footer />
     </Box>
