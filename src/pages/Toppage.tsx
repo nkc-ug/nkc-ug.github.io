@@ -7,10 +7,16 @@ import {
   Typography,
 } from "@mui/material";
 import { Footer } from "../components/Footer";
-import headerimage from "../assets/images/eyecatch_vscode.jpg";
+import ec_vscode from "../assets/images/eyecatch_vscode.jpg";
+import ec_mtg from "../assets/images/eyecatch_ltmtg.jpg";
+import ec_groupshot from "../assets/images/eyecatch_groupshot.jpg";
 import nkcuglogo from "../assets/NKCUG_DP.svg";
 import { Header } from "../components/Header";
 import "../style/Toppage.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+import "swiper/css";
 
 function createData(name: string, location: string) {
   return { name, location };
@@ -38,17 +44,55 @@ export const Toppage = () => {
       <Box id="header">
         <Header />
         <Box className="eyecatch">
-          <Box
-            component="img"
-            src={headerimage}
-            alt="ヘッダー用画像"
-            className="eyecatchImg"
-          />
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <Box
+                component="img"
+                sx={{ display: "block", width: "100%", objectFit: "cover" }}
+                src={ec_vscode}
+                alt="ヘッダー用画像"
+                className="eyecatchImg"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box
+                component="img"
+                sx={{ display: "block", width: "100%", objectFit: "cover" }}
+                src={ec_mtg}
+                alt="ヘッダー用画像"
+                className="eyecatchImg"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box
+                component="img"
+                sx={{ display: "block", width: "100%", objectFit: "cover" }}
+                src={ec_groupshot}
+                alt="ヘッダー用画像"
+                className="eyecatchImg"
+              />
+            </SwiperSlide>
+          </Swiper>
+
           <Box
             component="img"
             src={nkcuglogo}
             alt="NKC-UG Logo"
             id="eyecatchLogo"
+            zIndex={999}
           />
         </Box>
       </Box>
