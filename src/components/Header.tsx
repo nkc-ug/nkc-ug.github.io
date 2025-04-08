@@ -82,7 +82,7 @@ export const Header = () => {
             },
           }}
         >
-          <Hamburger toggled={isOpen} toggle={setOpen} />
+          <Hamburger toggled={isOpen} toggle={setOpen} size={40} />
           <Drawer
             open={isOpen}
             anchor="right"
@@ -92,7 +92,14 @@ export const Header = () => {
               },
             }}
           >
-            <Hamburger toggled={isOpen} toggle={setOpen} />
+            <Box
+              sx={{
+                width: "48px",
+                margin: "0.5rem 0.5rem 0.5rem auto",
+              }}
+            >
+              <Hamburger toggled={isOpen} toggle={setOpen} size={40} />
+            </Box>
             {PAGE_LINK.map((value, key) => {
               return (
                 <Button
@@ -109,6 +116,16 @@ export const Header = () => {
                 </Button>
               );
             })}
+            <Button
+              sx={{ margin: "2rem" }}
+              variant="outlined"
+              onClick={() => {
+                nav("/NewStudent");
+              }}
+            >
+              新入生の方へ
+              <ArrowRightIcon />
+            </Button>
           </Drawer>
         </Box>
       </Toolbar>
