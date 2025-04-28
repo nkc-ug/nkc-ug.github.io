@@ -1,4 +1,13 @@
-import { Box, Button, Link, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Link,
+  Typography,
+  Table,
+  TableBody,
+  TableCell,
+  TableRow,
+} from "@mui/material";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import "../style/NewStudent.scss";
@@ -12,6 +21,18 @@ export const NewStudent = () => {
     mb: "0.5rem",
     borderBottom: "thick double #32a1ce",
   };
+
+  function createData(title: string, bio: string) {
+    return { title, bio };
+  }
+
+  const eventData = [
+    createData("イベント名", "新入生向けNKC-UG説明会"),
+    createData("開催日時", "５月９日(金)　15:30～"),
+    createData("開催場所", "１号館　163教室"),
+    createData("内容", "NKC-UG説明会, GitHub勉強会"),
+  ];
+
   return (
     <Box sx={{ minHeight: "100vh", flexDirection: "column", display: "flex" }}>
       <Header />
@@ -61,13 +82,23 @@ export const NewStudent = () => {
             イベント概要
           </Typography>
           <Typography>
-            ここまで読んでくれた貴方のために現在NKC-UG説明会を準備中です！
+            ５月９日(金)に新入生向けNKC-UG説明会を開催します！
             <br />
-            現段階では５月のゴールデンウイーク前後を予定しております！詳細につきましては決まり次第再度告知させていただきます！
-            <br />
-            ぜひ参加してくださると幸いです！
+            詳細は下記をご覧ください！
           </Typography>
-          <Box sx={{ textAlign: "center", display: "none" }}>
+          <Table sx={{ margin: "auto", width: "fit-content" }}>
+            <TableBody>
+              {eventData.map((value, key) => {
+                return (
+                  <TableRow key={key}>
+                    <TableCell>{value.title}</TableCell>
+                    <TableCell>{value.bio}</TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+          <Box sx={{ textAlign: "center", margin: "1rem" }}>
             <Link
               href={
                 "https://forms.office.com/Pages/ResponsePage.aspx?id=eeUPGhB_lUOsHmxSoVCbiP4hXRkgLplMkTlk7A0MQPlUOEZHUVBKSUgxTzNOU0NaMDNCQTBDRzBBOS4u"
