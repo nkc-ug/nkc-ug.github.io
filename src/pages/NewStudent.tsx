@@ -31,6 +31,7 @@ export const NewStudent = () => {
     createData("開催日時", "５月９日(金)　15:30～"),
     createData("開催場所", "１号館　163教室"),
     createData("内容", "NKC-UG説明会, GitHub勉強会"),
+    createData("持ち物", "パソコン"),
   ];
 
   return (
