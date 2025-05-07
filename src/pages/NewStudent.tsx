@@ -28,7 +28,7 @@ export const NewStudent = () => {
 
   const eventData = [
     createData("イベント名", "新入生向けNKC-UG説明会"),
-    createData("開催日時", "５月９日(金)　15:30～"),
+    createData("開催日時", "５月１６日(金)・５月２３日(金)　15:30～"),
     createData("開催場所", "１号館　163教室"),
     createData("内容", "NKC-UG説明会, GitHub勉強会"),
     createData("持ち物", "パソコン"),
@@ -83,7 +83,7 @@ export const NewStudent = () => {
             イベント概要
           </Typography>
           <Typography>
-            ５月９日(金)に新入生向けNKC-UG説明会を開催します！
+            ５月１６日(金)・５月２３日(金)に新入生向けNKC-UG説明会を開催します！
             <br />
             詳細は下記をご覧ください！
           </Typography>
@@ -99,6 +99,9 @@ export const NewStudent = () => {
               })}
             </TableBody>
           </Table>
+          <Typography textAlign={"center"} margin={"0.5rem"}>
+            開催日が二日ありますが、内容は変わらないのでお好きな回へご参加ください！
+          </Typography>
           <Box sx={{ textAlign: "center", margin: "1rem" }}>
             <Link
               href={
