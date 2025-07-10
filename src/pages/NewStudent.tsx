@@ -1,12 +1,6 @@
 import {
   Box,
-  Button,
-  Link,
   Typography,
-  Table,
-  TableBody,
-  TableCell,
-  TableRow,
 } from "@mui/material";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
@@ -21,19 +15,7 @@ export const NewStudent = () => {
     mb: "0.5rem",
     borderBottom: "thick double #32a1ce",
   };
-
-  function createData(title: string, bio: string) {
-    return { title, bio };
-  }
-
-  const eventData = [
-    createData("イベント名", "新入生向けNKC-UG説明会"),
-    createData("開催日時", "５月１６日(金)・５月２３日(金)　15:30～"),
-    createData("開催場所", "１号館　163教室"),
-    createData("内容", "NKC-UG説明会, GitHub勉強会"),
-    createData("持ち物", "パソコン"),
-  ];
-
+  
   return (
     <Box sx={{ minHeight: "100vh", flexDirection: "column", display: "flex" }}>
       <Header />
@@ -77,40 +59,6 @@ export const NewStudent = () => {
             <br />
             また、プログラミング以外にも趣味などでBlender・Unityなどを触ってる人やバイクや車を趣味にしている人などなど、多くの分野・趣味を持つ先輩方との交流の機会を提供します！
           </Typography>
-        </Box>
-        <Box component="section" id="event_info">
-          <Typography variant="h2" sx={h2Style}>
-            イベント概要
-          </Typography>
-          <Typography>
-            ５月１６日(金)・５月２３日(金)に新入生向けNKC-UG説明会を開催します！
-            <br />
-            詳細は下記をご覧ください！
-          </Typography>
-          <Table sx={{ margin: "auto", width: "fit-content" }}>
-            <TableBody>
-              {eventData.map((value, key) => {
-                return (
-                  <TableRow key={key}>
-                    <TableCell>{value.title}</TableCell>
-                    <TableCell>{value.bio}</TableCell>
-                  </TableRow>
-                );
-              })}
-            </TableBody>
-          </Table>
-          <Typography textAlign={"center"} margin={"0.5rem"}>
-            開催日が二日ありますが、内容は変わらないのでお好きな回へご参加ください！
-          </Typography>
-          <Box sx={{ textAlign: "center", margin: "1rem" }}>
-            <Link
-              href={
-                "https://forms.office.com/Pages/ResponsePage.aspx?id=eeUPGhB_lUOsHmxSoVCbiP4hXRkgLplMkTlk7A0MQPlUOEZHUVBKSUgxTzNOU0NaMDNCQTBDRzBBOS4u"
-              }
-            >
-              <Button>申し込みはコチラから</Button>
-            </Link>
-          </Box>
         </Box>
       </Box>
       <Footer />
