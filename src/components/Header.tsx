@@ -11,6 +11,7 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 export const Header = () => {
   const [isOpen, setOpen] = useState(false);
   const nav = useNavigate();
+  const showShinkan = import.meta.env.VITE_SHOW_SHINKAN === "true";
   const PAGE_LINK = [
     { name: "トップへ", link: "/" },
     { name: "アカウント一覧", link: "/Account" },
@@ -49,15 +50,17 @@ export const Header = () => {
             },
           }}
         >
-          <Button
-            variant="outlined"
-            onClick={() => {
-              nav("/NewStudent");
-            }}
-          >
-            新入生の方へ
-            <ArrowRightIcon />
-          </Button>
+          {showShinkan && (
+            <Button
+              variant="outlined"
+              onClick={() => {
+                nav("/NewStudent");
+              }}
+            >
+              新入生の方へ
+              <ArrowRightIcon />
+            </Button>
+          )}
           {PAGE_LINK.map((value, key) => {
             return (
               <Button
@@ -116,16 +119,18 @@ export const Header = () => {
                 </Button>
               );
             })}
-            <Button
-              sx={{ margin: "2rem" }}
-              variant="outlined"
-              onClick={() => {
-                nav("/NewStudent");
-              }}
-            >
-              新入生の方へ
-              <ArrowRightIcon />
-            </Button>
+            {showShinkan && (
+              <Button
+                sx={{ margin: "2rem" }}
+                variant="outlined"
+                onClick={() => {
+                  nav("/NewStudent");
+                }}
+              >
+                新入生の方へ
+                <ArrowRightIcon />
+              </Button>
+            )}
           </Drawer>
         </Box>
       </Toolbar>
